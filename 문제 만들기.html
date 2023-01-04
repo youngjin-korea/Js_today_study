@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 만들기</title>
+    <script>
+
+        function setBit(){
+            this.bit=parseInt(prompt("bit값 64, 32중 입력하세요",""));
+            if(this.bit!= 64&&this.bit!=32){
+                alert("잘못 입력하셨습니다");
+                this.bit=64;
+            }
+        }
+        function printCom(){
+            document.write(this.kind + "(cpu:" +this.cpu+","+this.bit+"bit)");
+        }
+        let computer = new Object();
+        computer.kind="Desktop";
+        computer.cpu="Octa_core";
+        computer.bit=64;
+        computer.setBit=setBit;
+        computer.printCom=printCom;
+    </script>
+</head>
+<body>
+    <h3>컴퓨터 객체 만들기</h3>
+   <hr>
+
+    <form action=""> 
+        <input type="button" value="bit변경" onclick="computer.setBit();">
+         <br><input type="button" value="컴퓨터확인" onclick="computer.printCom();">
+    </form>
+</body>
+</html>

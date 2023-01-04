@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script>
+        function randomInt(){
+            return Math.floor(Math.random()*9)+1;  //return Math.floor(Math.random()*(최대값 :9 - 최솟값:1 +1))+최솟값:1
+            //1~9난수 생성
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let ques = randomInt()+ "*" + randomInt();
+
+        let user = prompt (ques + "값은 얼마입니까?",0);
+        if(user == null){
+            document.write("구구단 연습을 종료합니다.");
+        }
+        else
+        document.write("아니오!");
+        document.write(ques + "="+"<strong>"+ans+"입니다</strong>");
+    </script>
+</body>
+</html>
